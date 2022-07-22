@@ -1,2 +1,17 @@
 <%# <-- <% Make Poros for nation and send here%> 
 members count: <%= @characters.count %>
+===================================<br>
+<% 25.times do%>
+    <% @characters.each do |character| %>
+        <%= character[:name] or "unknown" %>
+        <%= character[:photoUrl] %>
+        <%= character[:allies] %>
+        <%= character[:enemies] %>
+        <%= character[:affiliation] %>
+    <% end %>
+<% end %>
+<br>
+===================================
+<% @characters.each do |character|%>
+    <%= character.name %>
+<% end %>
