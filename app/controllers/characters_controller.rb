@@ -1,5 +1,5 @@
 class CharactersController < ApplicationController
     def index
-        @characters = CharactersFacade.get_nation_members(params[:nation])
+       render json: CharactersFacade.get_nation_members(params[:affiliation])
     end
 end
