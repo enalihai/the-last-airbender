@@ -1,19 +1,19 @@
 <%# <-- <% Make Poros for nation and send here%> 
-members count: <%= @characters.count %>
+members displayed count: <%= @characters.count %><br>
 ===================================<br>
-<% 25.times do%>
-    <% @characters.each do |character| %>
-       <h1> <%= character[:name] or "unknown" %></h1><br>
-        <%= character[:photoUrl] %><br>
-        <%= character[:allies] %><br>
-        <%= character[:enemies] %><br>
-        <%= character[:affiliation] %><br>
+
+    <% @characters[0..24].each do |character| %>
+       <p><h1> <%= character[:name] or "unknown" %></h1>
+       Photo <img><%= character[:photoUrl] %></img></br>
+       Allies: <%= character[:allies] %><br>
+       Enemies: <%= character[:enemies] %><br>
+       Affiliations: <%= character[:affiliation] %><br></p>
     <% end %>
-<% end %>
 <br>
 ===================================
+Other known affiliates:
 <ul>
-<% @characters.each do |character|%>
-    <%= character[:name] %>
+<% @characters[25..100].each do |character|%>
+    <%= character[:name] %>, 
 <% end %>
 </ul>
