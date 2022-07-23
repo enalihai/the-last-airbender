@@ -3,17 +3,19 @@ members displayed count: <%= @characters.count %><br>
 ===================================<br>
 
     <% @characters[0..24].each do |character| %>
-       <p><h1> <%= character[:name] or "unknown" %></h1>
+    <ul>
+       <p><h1> <%= character[:name] %></h1>
        Photo <img><%= character[:photoUrl] %></img></br>
        Allies: <%= character[:allies] %><br>
        Enemies: <%= character[:enemies] %><br>
        Affiliations: <%= character[:affiliation] %><br></p>
+    </ul>
     <% end %>
 <br>
 ===================================
 Other known affiliates:
 <ul>
-<% @characters[25..100].each do |character|%>
+<% @characters.each do |character|%>
     <%= character[:name] %>, 
 <% end %>
 </ul>

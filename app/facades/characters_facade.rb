@@ -1,5 +1,9 @@
 class CharactersFacade
-    def self.get_nation_members(nation)
-       @characters = CharactersService.characters_by_nation(nation)
+    def self.get_nation_members(params)
+       @characters = CharactersService.characters_by_nation(params)
+    end
+
+    def parse_affiliates
+        binding.pry
     end
 end
