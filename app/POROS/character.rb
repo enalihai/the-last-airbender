@@ -6,12 +6,12 @@ class Character
         @photo = data[:photoUrl]
         @allies = data[:allies]
         @affiliations = data[:affiliation]
+        @enemies = data[:enemies]
     end
 
-    def enemies
-        binding.pry
-        data.each do |enemy|
-            enemy
-        end
-    end
+    # def parse_enemies(data)
+    #     data.select do |enemy|
+    #         enemy
+    #     end
+    # end
 end 

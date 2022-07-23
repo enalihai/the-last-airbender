@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
     def index
-       @characters = CharactersFacade.get_nation_members(params)
+       @characters = CharactersFacade.parse_affiliates(params)
     end
 
     private
